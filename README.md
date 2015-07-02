@@ -36,7 +36,7 @@ Template.upload.inheritsHooksFrom('uploadCloudinary')
 Template.upload.events
   'dragenter .drop-zone': (e,t) ->
     $(t.find('.drop-zone')).css('background-color':'yellow')
-  'dragleave .drop-zone': (e, t) ->
+  'dragleave .drop-zone, drop .drop-zone': (e, t) ->
     $(t.find('.drop-zone')).css('background-color':'white')
 
 settings =
@@ -52,6 +52,9 @@ settings =
     bar = self.$('#' + self.data.id + '-bar')
     x = Math.round((data.loaded * 100.0) / data.total)
     bar.progress(percent: x)
+  fail: (self, data) ->
+    sAlert.error('Error!', {position: 'top-right', timeout: 5000})
+    console.log data
 
 Template.demo.helpers
   settings: -> settings

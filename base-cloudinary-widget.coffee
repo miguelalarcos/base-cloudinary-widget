@@ -4,6 +4,7 @@ Template.uploadCloudinary.hooks
     start = this.data.settings.start
     done = this.data.settings.done
     progress = this.data.settings.progress
+    fail = this.data.settings.fail
     self = this
     this.$('input').bind 'cloudinarystart', (e, data) ->
       if start
@@ -14,3 +15,8 @@ Template.uploadCloudinary.hooks
     this.$('input').bind 'cloudinaryprogress', (e, data) ->
       if progress
         progress self, data
+    this.$('input').bind 'cloudinaryfail', (e, data) ->
+      if fail
+        fail self, data
+
+

@@ -1,12 +1,8 @@
 Package.describe({
   name: 'miguelalarcos:base-cloudinary-widget',
-  version: '0.1.0',
-  // Brief, one-line summary of the package.
-  summary: '',
-  // URL to the Git repository containing the source code for this package.
-  git: '',
-  // By default, Meteor will default to using README.md for documentation.
-  // To avoid submitting documentation, set this field to null.
+  version: '0.1.1',
+  summary: 'All you need to make your own cloudinary-js upload widget.',
+  git: 'https://github.com/miguelalarcos/base-cloudinary-widget.git',
   documentation: 'README.md'
 });
 
